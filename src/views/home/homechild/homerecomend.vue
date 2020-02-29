@@ -37,4 +37,8 @@ export default {
     width: 80%;
     padding-bottom: 5px;
   }
+  .recomend-item a{
+    text-decoration: none;
+    color:rgb(216, 131, 131)
+  }
 </style>

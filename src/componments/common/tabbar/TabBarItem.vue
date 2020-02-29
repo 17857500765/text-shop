@@ -1,5 +1,5 @@
 <template>
-    <div class="tab-bar-item" @click="change">
+    <div class="tab-bar-item" @click="change()">
       <div v-if="!isActive"><slot name='photo'></slot></div>
       <div v-else><slot name='photo_active'></slot></div>
       <div :style="activeStyle"><slot name='text'></slot></div>
@@ -10,6 +10,7 @@
 </template>
 
 <script>
+
 export default {
   name: "tabBarItem",
   props: {
@@ -34,7 +35,13 @@ export default {
   },
   methods: {
     change(){
-      this.$router.push(this.path)
+      // if(this.sign != this.path){
+      //   this.$router.push(this.path)  
+      // }
+      //console.log(this.$store.state.sign);
+      if(this.$store.state.sign != this.path){
+        this.$router.push(this.path)
+      }
     }
   }
 }

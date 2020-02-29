@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Store from '../store/index'
 
 Vue.use(VueRouter)
 
@@ -19,5 +20,14 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+// router.beforeEach((to, from, next) => {
+//   Store.state.sign = router.history.current.path
+//   next()
+// })
+router.afterEach( route => {
+  Store.state.sign = router.history.current.path
+  //console.log(router.history.current.path);
+})
+
 
 export default router

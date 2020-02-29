@@ -9,7 +9,7 @@
         <slot name="indicator" v-if="showIndicator && slideCount>1">
           <div v-for="(item, index) in slideCount" class="indi-item" :class="{active: index === currentIndex-1}" :key="index"></div>
         </slot>
-      </div>
+      </div> 
     </div>
 </template>
 
@@ -47,7 +47,6 @@
       // 1.操作DOM, 在前后添加Slide
       setTimeout(() => {
         this.handleDom();
-
         // 2.开启定时器
         this.startTimer();
       }, 100)

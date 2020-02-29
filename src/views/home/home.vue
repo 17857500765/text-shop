@@ -10,6 +10,8 @@
       </swiper-item>
     </swiper> -->
     <home-recomend :recommends="recommends"></home-recomend>
+
+    
   </div>
 </template>
 <script>
@@ -40,8 +42,6 @@ export default {
     getHomeData().then(res =>{
       this.banners = res.data.data.banner.list
       this.recommends = res.data.data.recommend.list
-      console.log(this.banners);
-      console.log(this.recommends);
     })
   }
 }
