@@ -21,7 +21,7 @@
        <img slot='photo_active' src="../../../assets/img/tabbar/profile_active.svg">
        <div slot='text' >我的</div>
      </tab-bar-item>
-   </tab-bar>
+    </tab-bar>
   </div>
 </template>
 
