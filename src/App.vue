@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <main-tab-bar></main-tab-bar>
+    <main-tab-bar class="tab-bar"></main-tab-bar>
     <router-view></router-view>
   </div>
 </template>
@@ -17,4 +17,7 @@ export default {
 
 <style>
   @import "./assets/css/normalize.css";
+  .tab-bar{
+    z-index: 99999;
+  }
 </style>

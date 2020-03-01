@@ -7,12 +7,13 @@ export function request(config){
   instance.interceptors.request.use(config =>{
     return config
   }, err =>{
-    console.log("请求失败");
+    console.log("请求失败1");
   })
+  
   instance.interceptors.response.use(config =>{
     return config
   }, err =>{
-    console.log("请求失败");
+    console.log("请求失败2");
   })
   return instance(config)
 }

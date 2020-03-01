@@ -40,7 +40,7 @@ export default {
       // }
       //console.log(this.$store.state.sign);
       if(this.$store.state.sign != this.path){
-        this.$router.push(this.path)
+        this.$router.push(this.path)  
       }
     }
   }

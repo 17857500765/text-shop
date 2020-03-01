@@ -1,6 +1,6 @@
 <template>
   <div>
-    <tab-bar>
+    <tab-bar class="tab">
      <tab-bar-item path="/home" >
        <img slot='photo' src="../../../assets/img/tabbar/home.svg" >  
        <img slot='photo_active' src="../../../assets/img/tabbar/home_active.svg">
