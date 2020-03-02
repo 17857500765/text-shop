@@ -10,10 +10,10 @@ export function request(config){
     console.log("请求失败1");
   })
   
-  instance.interceptors.response.use(config =>{
-    return config
-  }, err =>{
-    console.log("请求失败2");
-  })
+  // instance.interceptors.response.use(config =>{
+  //   return config
+  // }, err =>{
+  //   console.log("请求失败2");
+  // })
   return instance(config)
 }
