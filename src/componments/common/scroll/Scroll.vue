@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap" ref="wrapper">
+  <div class="wrap">
     <div class="content">
       <slot></slot>
     </div>
@@ -26,7 +26,7 @@ export default {
     }
   },
   mounted () {
-    this.scroll = new BScroll(this.$refs.wrapper, {
+    this.scroll = new BScroll('.wrap', {
       click: true,
       probeType: this.probe,
       pullUpLoad: this.pullUp
@@ -35,8 +35,7 @@ export default {
       this.$emit("scroll", position)
     })
     this.scroll.on('pullingUp', () =>{
-      
-      this.$emit("pullingUp")
+       this.$emit("pullingUp")
       setTimeout(() => {
         this.scroll.finishPullUp()   //finish调用后才可再一次调用pullupload
       }, 1500);

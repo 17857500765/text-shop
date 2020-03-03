@@ -1,9 +1,9 @@
 <template>
   <div>
     <swiper>
-      <swiper-item v-for = "(item ,index) in banners" :key="index">
+      <swiper-item v-for = "(item ,index) in banners" :key="index" >
         <a :href="item.link">
-          <img :src="item.image">
+          <img :src="item.image" @load="imgLoad">
         </a>
       </swiper-item>
     </swiper>
@@ -16,6 +16,11 @@ import { Swiper, SwiperItem } from '../../../componments/common/swiper/index'
 
 export default {
   name: "HomeSwiper",
+  data () {
+    return {
+      sign: false  
+    }
+  },
   components: {
       Swiper,
       SwiperItem
@@ -25,6 +30,15 @@ export default {
       type: Array,
       default(){
         return []
+      }
+    }
+  },
+  methods: {
+    imgLoad(){
+      //console.log("哈哈哈");
+      if(!this.sign){
+        this.$emit("swiperLoad", "哈哈哈")
+        this.sign = false
       }
     }
   }
